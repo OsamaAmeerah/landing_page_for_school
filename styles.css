@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
 :root {
-  --primary-color: #f86e40;
+  --primary-color: #C27E33;
   /* --primary-color: #EE1C25; */
   --secondary-color: #111111;
   --secondary-color-light: #232220;
@@ -103,17 +103,61 @@ body {
   color: var(--white);
 }
 
+/* Slider Buttons */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.slider-btn:hover {
+  background: rgba(0, 0, 0, 0.7);
+  transform: translateY(-50%) scale(1.1);
+}
+
+#prevBtn {
+  left: 20px;
+}
+
+#nextBtn {
+  right: 20px;
+}
+@media (max-width: 768px) {
+  .slider-btn {
+    display: none;
+  }
+}
+
+
 header {
   background-image: linear-gradient(
       to right,
       rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.8)
     ),
-    url("assets/header.jpg");
+    url("assets/header1.jpg");
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; 
+  height: 100vh;  
+  max-height: 600px; 
+  position: relative;
+  transition: opacity 1s ease-in-out;
 }
+
+header.fade-out {
+  opacity: 0;
+}
+
 
 nav {
   max-width: var(--max-width);
@@ -334,7 +378,7 @@ nav {
 }
 
 .fees-table .amount {
-  background-color: #ff7043;
+  background-color: var(--primary-color);
   color: #ffffff;
   padding: 8px 20px;
   border-radius: 12px;
@@ -351,7 +395,7 @@ nav {
 .expand-icon {
   font-size: 20px;
   cursor: pointer;
-  color: #ff7043;
+  color: var(--primary-color);
   transition: transform 0.2s ease;
 }
 
@@ -476,10 +520,16 @@ nav {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+#instructions {
+  padding: 30px;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
 .section__subheader {
   font-size: 24px;
-  color: #ff7043; 
+  color: var(--primary-color); 
   text-align: center;
   margin-bottom: 20px;
   font-weight: bold;
@@ -501,7 +551,17 @@ nav {
 
 .discount-title {
   font-size: 20px;
-  color: #ff7043;
+  color: var(--primary-color);
+  text-align: right;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-family: 'Arial', sans-serif;
+}
+.instructions-title {
+  font-size: 20px;
+  color: var(--primary-color);
   text-align: right;
   margin-bottom: 15px;
   text-transform: uppercase;
@@ -535,7 +595,7 @@ nav {
 
 .discount-table .amount {
   font-weight: bold;
-  color: #ff7043;
+  color: var(--primary-color);
 }
 
 .discount-description {
@@ -560,6 +620,7 @@ nav {
 .vision__card img {
   margin-bottom: 1rem;
   border-radius: 5px;
+  max-height: 250px;
 }
 
 .vision__card > div {
@@ -588,6 +649,13 @@ nav {
 
 .vision__card p {
   color: var(--text-light);
+}
+
+.instructions-section {
+  background-color: #282828;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .subscribe {

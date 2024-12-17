@@ -20,7 +20,7 @@ const scrollRevealOption = {
   duration: 1000,
 };
 
-// header container
+//* header container
 ScrollReveal().reveal(".header__container h1", {
   ...scrollRevealOption,
 });
@@ -30,13 +30,13 @@ ScrollReveal().reveal(".header__container .btn", {
   delay: 500,
 });
 
-// about container
+//* about container
 ScrollReveal().reveal(".about__item", {
   ...scrollRevealOption,
-  interval: 500,
+  interval: 200,
 });
 
-// stats container
+//* stats container
 ScrollReveal().reveal(".stats__image img", {
   ...scrollRevealOption,
   origin: "right",
@@ -49,7 +49,7 @@ ScrollReveal().reveal(".stats__card", {
   delay: 1000,
 });
 
-// blog container
+//* blog container
 ScrollReveal().reveal(".blog__card", {
   ...scrollRevealOption,
   interval: 500,
@@ -61,3 +61,51 @@ const swiper = new Swiper(".swiper", {
     el: ".swiper-pagination",
   },
 });
+
+
+//* Slider
+const images = [
+  "assets/header.jpg",
+  "assets/blog-1.jpg",
+  "assets/header2.jpg",
+];
+
+let currentImageIndex = 0; 
+const header = document.querySelector("header");
+
+function updateBackground() {
+  header.classList.add("fade-out");
+  setTimeout(() => {
+    header.style.backgroundImage = `
+      linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
+      url('${images[currentImageIndex]}')
+    `;
+    header.classList.remove("fade-out");
+  }, 300);
+}
+
+let sliderInterval = setInterval(nextImage, 3000);
+
+function nextImage() {
+  currentImageIndex = (currentImageIndex + 1) % images.length;
+  updateBackground();
+}
+
+function prevImage() {
+  currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+  updateBackground();
+}
+
+document.getElementById("nextBtn").addEventListener("click", () => {
+  clearInterval(sliderInterval);
+  nextImage();
+  sliderInterval = setInterval(nextImage, 3000);
+});
+
+document.getElementById("prevBtn").addEventListener("click", () => {
+  clearInterval(sliderInterval);
+  prevImage();
+  sliderInterval = setInterval(nextImage, 3000);
+});
+
+updateBackground();

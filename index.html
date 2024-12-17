@@ -19,23 +19,27 @@
   <body>
     <header>
       <nav>
-        <div class="nav__logo"><img src="assets\logo.jpg" alt="logo"></div>
+        <div class="nav__logo"><img src="assets/logo.jpg" alt="logo"></div>
         <ul class="nav__links" id="nav-links">
           <li class="link"><a href="#home">الصفحة الرئيسية</a></li>
           <li class="link"><a href="#about">لوحة المعلومات</a></li>
           <li class="link"><a href="#fees">الرسوم</a></li>
- 
+          <li class="link"><a href="#vision">الرؤية</a></li>
         </ul>
         <div class="nav__menu__btn" id="menu-btn">
           <span><i class="ri-menu-line"></i></span>
         </div>
       </nav>
       <div class="section__container header__container" id="home">
-        <h1>أكاديمية المجددون الدولية
-        </h1>
-   
+        <h1>أكاديمية المجددون الدولية</h1>
       </div>
+      
+      <!-- Slider Controls -->
+      <button id="prevBtn" class="slider-btn">&#8592;</button>
+      <button id="nextBtn" class="slider-btn">&#8594;</button>
+      
     </header>
+    
 
     <section class="about" id="about">
       <div class="section__container">
@@ -258,14 +262,14 @@
             </p>
           </div>
           <div class="vision__card">
-            <img src="assets/blog-1.jpg" alt="vision" />
+            <img src="assets/blog2.jpg" alt="vision" />
   
             <p>
               تقديم خدمات تربوية وتعليم متميز بأحدث الوسائل التقنية والأنشطة الفعالة في بيئة امنة ومحفزة لإعداد جيل مؤمن بربه، منتم لأمته، مبدع، مفكر، نافع لنفسه ووطنه من خلال كفاءات تربوية مؤهلة وبالتشارك مع اولياء الأمور.
             </p>
           </div>
           <div class="vision__card">
-            <img src="assets/blog-1.jpg" alt="vision" />
+            <img src="assets/blog3.jpg" alt="vision" />
             <p>
               بناء علاقة بين الطلبة وأولياء الأمور والمجتمع المحلي قائمة على الاحترام المتبادل والتواصل الدائم والحوار المفتوح.
             </p>
@@ -308,6 +312,23 @@
           <p class="discount-description">يتم عمل خصومات خاصة لحفظة القران الكريم، التفوق الأكاديمي، الأنشطة حسب التعليمات المعمول بها في الأكاديمية</p>
         </div>
       </div>
+    </section>   
+    <section id="instructions">
+
+      <div class="section__subheader">تعليمات وآليات التسجيل</div>
+
+    <div class="instructions-section">
+      <div class="about__item" >على ولي الامر تسديد كامل القسط السنوي بحيث تكون آخر دفعة للفصل الدراسي الأول 31\5\2024 وآخر دفعة للفصل الدراسي الثاني 31\5\2025</div>
+      <div class="about__item" >عقد دليل التسجيل جزء لا يتجزأ من العقد</div>
+      <h3 class="discount-title">تجديد التسجيل</h3>
+      <div class="about__item" >تسديد حساب السنة الدراسية السابقة</div>
+      <div class="about__item" >توقيع العقد الخاص بالتجديد من قبل ولي الأمر</div>
+      <div class="about__item">حجز المقعد (300) دينار عن كل طالب، تحسب من الرسوم في حال الاستمرار ولا ترد في حال الانسحاب</div>
+      <h3 class="discount-title">تسجيل الطلبة الجدد</h3>
+      <div class="about__item">احضار براءة ذمة مالية من المدرسة السابقة</div>
+      <div class="about__item">يعتمد قبول الطلبة بعد مقابلتهم من إدارة المدرسة</div>
+      <div class="about__item">للمدرسة الحق في الاعتذار عن استمرار تسجيل اي طالب في الروضة أو المراحل الدراسية الأولى خلال شهرين من بدء الدوام المدرسي حال ظهور أي مشاكل تمنع اندماج الطالب مع زملائه</div>
+    </div>
     </section>
     
 
@@ -315,13 +336,14 @@
       <div class="section__container footer__container">
         <div class="footer__col">
           <div class="nav__logo"><img src="assets\logo.jpg" alt="logo"></div>
-          <p>
-            العاصمة ، طارق ، طبربور خلف كلية الشهيد فيصل بجانب الاتحاد الرياضي
-          </p>
+        
           <div class="footer__socials">
-            <a href="https://www.facebook.com/mojiia"><i class="ri-facebook-fill"></i></a>
-            <a href="mailto:iia2010@yahoo.com"><i class="ri-mail-fill"></i></a>
-   
+            <p style="display: inline; margin: 0; vertical-align: middle;">
+              العاصمة ، طارق ، طبربور خلف كلية الشهيد فيصل بجانب الاتحاد الرياضي
+          </p>
+          <a href="https://www.facebook.com/mojiia"><i class="ri-facebook-fill"></i></a>
+          <a href="mailto:iia2010@yahoo.com"><i class="ri-mail-fill"></i></a>
+
           </div>
         </div>
         <div class="footer__col">
@@ -333,9 +355,11 @@
           </div>
         </div>
         <div class="footer__col">
-          <h4></h4>
+          <h4>للتواصل</h4>
           <div class="footer__links">
-    
+            <i class="ri-phone-fill">06 5050102 - 06 5050602</i><br>
+          <i class="ri-smartphone-fill">0780 566 002 - 0799 702 657</i>
+            
           </div>
         </div>
         <div class="footer__col">
