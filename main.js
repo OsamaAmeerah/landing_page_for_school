@@ -33,7 +33,7 @@ ScrollReveal().reveal(".header__container .btn", {
 //* about container
 ScrollReveal().reveal(".about__item", {
   ...scrollRevealOption,
-  interval: 500,
+  interval: 200,
 });
 
 //* stats container
